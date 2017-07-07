@@ -38,5 +38,14 @@ Android App.
 - Add your device names to /res/strings.xml
 - Build and upload your .apk to a device
 
+## Step 5: Connect Neopixels
+
+- Connect your Neopixel data line to pin5 (default)
+
+Note* You can edit the pin and/or numPixels in the init.js file in the mos tool ui
+
+## Screenshots
+![Android Companion App](http://i.imgur.com/WoNeQRom.png)
+
 ### Video
 [![Mongoose OS + AWS IoT](https://s3.amazonaws.com/mongoose-os/video-shot.png)](https://www.youtube.com/watch?v=2zZWANSQKqg "Mongoose OS + AWS IoT")
