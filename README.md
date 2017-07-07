@@ -1,9 +1,8 @@
 # Mongoose OS & AWS IoT - Neopixel and Thing Shadow with Android Companion App
 
 ## Overview
-This app does two things.
-- Reading UART 0 of ESP8266 and sending it to AWS IoT
-- Sending device meta data and two pins state to AWS IoT
+This app allows for easy neopixel control using AWS IoT and comes with an
+Android App.
 
 ## How to install this app
 
@@ -19,26 +18,25 @@ This app does two things.
 
 ##### If app not available in MOS tool UI
 
-- Clone this repo ```git clone https://github.com/bravokeyl/mos-aws.git```
+- Clone this repo ```git clone https://github.com/austinn/AWS-IoT-Neopixel-MongooseOS.git```
 - Go into the directory `mos-aws` and run `mos ui` which opens the project in UI
 
 ## Step 2: Set up Wi-Fi
 
 - You can do this via mos tool ui or using command `mos wifi WIFI_NAME WIFI_PASSWORD`
 
-Note that `mos` talks to the device using RPC mechanism.
-RPC can talk over serial (uart), http, mqtt. By default, `mos` talks via uart.
-but aws-uart example takes over uart, therefore mos RPC does not work.
-You need to use another RPC channel - for example websocket. Therefore,
-update `mos.yml`, put your wifi credentials there, then build/flash,
-see what IP address is assigned to your board, and start mos as
-`mos --port ws://IP_ADDRESS/rpc`.
-
 ## Step 3: Set up and Provision AWS IoT thing, Policy
 
 - You can do this via mos tool ui or using command `mos aws-iot-setup --aws-iot-policy mos-default`
 - Create a thing in AWS IoT and you are done
-- Test this by going into AWS IoT MQTT test Console by subscribing to `mos/#` with QoS 1
+
+## Step 4: Configure the Android App with AWS Keys
+
+- Clone this repo ```git clone https://github.com/austinn/AWS-IoT-Neopixel-MongooseOS.git```
+- Import project into Android Studio
+- Edit the file /utils/Constants.java
+- Add your device names to /res/strings.xml
+- Build and upload your .apk to a device
 
 ### Video
 [![Mongoose OS + AWS IoT](https://s3.amazonaws.com/mongoose-os/video-shot.png)](https://www.youtube.com/watch?v=2zZWANSQKqg "Mongoose OS + AWS IoT")
