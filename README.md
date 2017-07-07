@@ -32,7 +32,7 @@ Android App.
 
 ## Step 4: Configure the Android App with AWS Keys
 
-- Clone this repo ```git clone https://github.com/austinn/AWS-IoT-Neopixel-MongooseOS.git```
+- Clone this repo ```git clone https://github.com/austinn/AWS-IoT-Neopixel-Android```
 - Import project into Android Studio
 - Edit the file /utils/Constants.java
 - Add your device names to /res/strings.xml
